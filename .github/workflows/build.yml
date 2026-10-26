@@ -1,0 +1,22 @@
+
+name: Kompilacja kalkulatora
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Pobranie kodu
+        uses: actions/checkout@v4
+
+      - name: Instalacja .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Kompilacja projektu
+        run: dotnet build KalkulatorSpirytusu.csproj --configuration Release
