@@ -19,7 +19,7 @@ public class MainForm : Form
         StartPosition = FormStartPosition.CenterScreen;
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
-
+BackColor = Color.WhiteSmoke;
         Controls.Add(new Label
         {
             Text = "Objętość naczynia (ml):",
